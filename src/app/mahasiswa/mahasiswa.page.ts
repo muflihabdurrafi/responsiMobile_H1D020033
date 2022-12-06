@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, LoadingController } from '@ionic/angular';
 import { ApiService } from '../api.service';
-import { AuthenticationService } from '../services/authentication.service';
-import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-mahasiswa',
   templateUrl: './mahasiswa.page.html',
@@ -14,19 +13,13 @@ export class MahasiswaPage {
   alamat: any;
   mahasiswa: any[];
   constructor(
-    private authService: AuthenticationService,
-    private router: Router,
     public _apiService: ApiService,
     private alertController: AlertController,
     public loadingController: LoadingController
   ) {
     this.getMahasiswa();
   }
-  //membuat fungsi logout
-  logout() {
-    this.authService.logout(); // lempar ke authService lalu cari fungsi logout
-    this.router.navigateByUrl('/', { replaceUrl: true }); // alihkan ke halama
-  }
+
   ngOnInit() {
     console.log('cek fungsi halaman event init jalan');
   }

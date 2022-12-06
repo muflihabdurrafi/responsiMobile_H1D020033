@@ -43,7 +43,7 @@ export class MahasiswaTambahPage implements OnInit {
         this.alertController
           .create({
             header: 'Notifikasi',
-            message: 'Berhasil input data Mahasiswa',
+            message: 'Berhasil input data Pemain',
             buttons: ['OK'],
           })
           .then((res) => {
@@ -55,7 +55,7 @@ export class MahasiswaTambahPage implements OnInit {
         this.alertController
           .create({
             header: 'Notifikasi',
-            message: 'Gagal input data Mahasiswa',
+            message: 'Gagal input data Pemain',
             buttons: ['OK'],
           })
           .then((res) => {
