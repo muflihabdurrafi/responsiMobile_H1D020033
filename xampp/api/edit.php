@@ -8,13 +8,13 @@ $nim = $data['nim'];
 $alamat = $data['alamat'];
 
 $query = mysqli_query($koneksi, "UPDATE mahasiswa SET nama='$nama',alamat = '$alamat' WHERE nim='$nim'");
-// if ($query) {
-//     http_response_code(201);
-//     $pesan['status'] = 'sukses';
-// } else {
-//     http_response_code(422);
-//     $pesan['status'] = 'gagal';
-// }
+if ($query) {
+    http_response_code(201);
+    $pesan['status'] = 'sukses';
+} else {
+    http_response_code(422);
+    $pesan['status'] = 'gagal';
+}
 
 echo json_encode($pesan);
 echo mysqli_error($koneksi);
